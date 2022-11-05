@@ -1,0 +1,226 @@
+@font-face {
+    src: url(assets/fonts/Heebo-Regular.ttf);
+    font-family: HeeboRegular;
+}
+@font-face {
+    src: url(assets/fonts/Heebo-Light.ttf);
+    font-family: HeeboLight;
+}
+/* Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    -o-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: HeeboLight, sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 650px 200px repeat(4, 500px);
+    grid-template-areas: "logo nav nav"
+                "intro intro intro"
+                "about about about"
+                "gallery gallery gallery"
+                "what-i-do what-i-do what-i-do"
+                "contact contact contact";
+    background: #1b1f24;
+    width: 100vw;
+}
+header {
+    background: url(assets/images/christian-buehner-unsplash.jpg) top center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+}
+header {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+header nav a.logo {
+    grid-area: logo;
+}
+header nav ul {
+    grid-area: nav;
+    list-style: none;
+    float: right;
+}
+header nav ul li {
+    display: inline;
+    margin-left: 10px;
+}
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+header .intro {
+    grid-area: intro;
+    font-family: HeeboRegular, sans-serif;
+    margin-top: 120px;
+}
+header .intro h1 {
+    font-size: 48px;
+}
+header .intro p {
+    margin-top: 20px;
+    font-size: 14px;
+    width: 400px;
+}
+button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 10px 40px;
+}
+.about {
+    grid-area: about;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    width: 100vw;
+    margin-top: 0;
+}
+.about>h1 {
+    font-size: 21px;
+    width: 300px;
+}
+.about>h1>span {
+    font-size: 48px;
+}
+.about .para {
+    width: 350px;
+    padding-top: 50px;
+}
+.about .para p {
+    font-size: 12px;
+}
+.gallery {
+    grid-area: gallery;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    width: 95%;
+    margin-left: 50px;
+}
+.gallery img {
+    width: 200px;
+    height: 200px;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+.what-i-do {
+    grid-area: what-i-do;
+    width: 100vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin-left: 50px;
+}
+.what-i-do h1 {
+    font-size: 40px;
+    width: fit-content;
+    margin-top: -100px;
+}
+.what-i-do .details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.what-i-do .details figure {
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.what-i-do .details figure h3 {
+    font-size: 21px;
+}
+.what-i-do .details figure figcaption {
+    font-size: 14px;
+}
+.contact {
+    grid-area: contact;
+    background: url(assets/images/alice-donovan-rouse-unsplash.jpg) ; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    width: 100vw;
+}
+.contact h2 {
+    font-size: 21px;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 30px;
+}
+.contact .my-infos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-top: 100px;
+}
+.contact .my-infos figure {
+    padding: 20px 10px;
+}
+.contact .my-infos figure:first-child {
+    background-color: white;
+    width: 300px;
+    color: black;
+}
+.contact .my-infos figure:nth-child(2) {
+    background-color: #1b1f24;
+    width: 400px;
+}
+.contact .my-infos figure h1 {
+    font-size: 40px;
+}
+.contact .my-infos figure figcaption {
+    font-size: 11px;
+}
+.contact .my-infos figure:nth-child(2) figcaption {
+    cursor: pointer;
+}
